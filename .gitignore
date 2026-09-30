@@ -1,0 +1,5 @@
+build_workspace/
+*.keystore
+*.jks
+.DS_Store
+*.apk.idsig

@@ -11,8 +11,8 @@ A modern, privacy-first Android application that automatically replies to WhatsA
 
 ---
 
-### 🌐 [**Visit Official Landing Page**](https://prince-nebhwani.github.io/WhatsApp-Auto-Responder/) &nbsp;|&nbsp; 📥 [**Download Latest APK (v1.0.0)**](https://github.com/Prince-nebhwani/WhatsApp-Auto-Responder/releases/download/v1.0.0/WhatsApp-Auto-Responder.apk)
-*Direct download • Verified Build • Size: ~21.6 MB*
+### 🌐 [**Visit Official Landing Page**](https://prince-nebhwani.github.io/WhatsApp-Auto-Responder/) &nbsp;|&nbsp; 📥 [**Download Latest APK (v1.0.1 - Security Patched)**](https://github.com/Prince-nebhwani/WhatsApp-Auto-Responder/releases/download/v1.0.1/WhatsApp-Auto-Responder.apk)
+*Direct download • Verified Build • Size: ~18.8 MB*
 
 ---
 
@@ -67,22 +67,26 @@ To verify that your downloaded file has not been altered or tampered with, compa
 
 - **Filename:** `WhatsApp-Auto-Responder.apk`
 - **Package Name:** `com.aistudio.whatsappautoresponder.zkympl`
-- **Version:** `1.0` (Build 1)
-- **Signature:** Android APK Signature Scheme v2 & v3 verified
-- **File Size:** `22,636,976 bytes (21.58 MiB)`
+- **Version:** `1.0.1` (Build 2) — *Security Hardened Release*
+- **File Size:** `19,676,686 bytes (18.77 MiB)`
 
 | Hash Algorithm | Checksum |
 |---|---|
-| **SHA-256** | `61d03704acb2859c8c020c3ab4689339fc584d9fa4d009c364a0f97db456b07b` |
-| **SHA-1** | `8b185e8758c350700da3e95de36c2b165a9c1dcf` |
-| **MD5** | `c3ccdeb52e056a480e71c70f172e0fbf` |
+| **SHA-256** | `4f6473525a045145ba0520b4aee2b181449cd1720ab40612521af596d190fbee` |
+| **SHA-1** | `aef4f65ac29ae31d2ee333859a3c07295256844a` |
+| **MD5** | `bd5e7e66fa680988815def39fbcf81cc` |
+
+### 🛡️ Security Patch v1.0.1 Changelog
+- **Prompt Injection Defense:** Hardened AI system instruction to explicitly reject and ignore adversarial override commands inside incoming messages.
+- **ADB Backup Disabled:** Explicitly set `android:allowBackup="false"` to prevent unauthorized data extractions via USB debugging.
+- **Debug Mode Stripped:** Set `android:debuggable="false"` to secure app memory against debugger inspection.
 
 ### How to Verify Checksum
 
 #### On Linux / macOS:
 ```bash
 sha256sum WhatsApp-Auto-Responder.apk
-# Expected output: 61d03704acb2859c8c020c3ab4689339fc584d9fa4d009c364a0f97db456b07b
+# Expected output: 4f6473525a045145ba0520b4aee2b181449cd1720ab40612521af596d190fbee
 ```
 
 #### On Windows (PowerShell):
