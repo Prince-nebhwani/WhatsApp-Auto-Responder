@@ -1,0 +1,1 @@
+Smart WhatsApp auto-responder powered by Google Gemini AI with customizable personality tones.

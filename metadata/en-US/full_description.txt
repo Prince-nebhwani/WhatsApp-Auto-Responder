@@ -1,0 +1,9 @@
+A modern, privacy-first Android application that automatically replies to WhatsApp messages using Google Gemini AI.
+
+Features:
+* Google Gemini AI: Context-aware responses that reply like a human rather than rigid keyword matching.
+* Customizable Personality Tones: Choose between Professional, Friendly, Chill, Witty, or write your own custom prompt.
+* Message Scheduler: Schedule messages to contacts with exact Android alarm triggers.
+* 100% Privacy & Zero Middleman: Direct connection from device to Google Gemini API using your personal API key.
+* Local SQLite Storage: Chat logs and rules remain entirely on your device in a local Room database.
+* Ban-Proof: Uses Android's native NotificationListenerService and RemoteInput APIs, avoiding unofficial WhatsApp reverse-engineering.
