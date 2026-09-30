@@ -1,6 +1,7 @@
 # 🤖 WhatsApp Auto-Responder (AI-Powered)
 
 [![GitHub Release](https://img.shields.io/github/v/release/Prince-nebhwani/WhatsApp-Auto-Responder?color=25D366&logo=github&style=for-the-badge)](https://github.com/Prince-nebhwani/WhatsApp-Auto-Responder/releases/latest)
+[![Website](https://img.shields.io/badge/Website-Live%20Demo-25D366?logo=googlechrome&logoColor=white&style=for-the-badge)](https://prince-nebhwani.github.io/WhatsApp-Auto-Responder/)
 [![Android](https://img.shields.io/badge/Platform-Android%208.0%2B-3DDC84?logo=android&logoColor=white&style=for-the-badge)](https://github.com/Prince-nebhwani/WhatsApp-Auto-Responder/releases)
 [![AI Engine](https://img.shields.io/badge/AI%20Engine-Google%20Gemini-4285F4?logo=google&logoColor=white&style=for-the-badge)](https://ai.google.dev/)
 [![UI](https://img.shields.io/badge/UI-Jetpack%20Compose-4285F4?logo=jetpackcompose&logoColor=white&style=for-the-badge)](https://developer.android.com/jetpack/compose)
@@ -10,7 +11,7 @@ A modern, privacy-first Android application that automatically replies to WhatsA
 
 ---
 
-### 📥 [**👉 Download Latest APK (v1.0.0)**](https://github.com/Prince-nebhwani/WhatsApp-Auto-Responder/releases/download/v1.0.0/WhatsApp-Auto-Responder.apk)
+### 🌐 [**Visit Official Landing Page**](https://prince-nebhwani.github.io/WhatsApp-Auto-Responder/) &nbsp;|&nbsp; 📥 [**Download Latest APK (v1.0.0)**](https://github.com/Prince-nebhwani/WhatsApp-Auto-Responder/releases/download/v1.0.0/WhatsApp-Auto-Responder.apk)
 *Direct download • Verified Build • Size: ~21.6 MB*
 
 ---

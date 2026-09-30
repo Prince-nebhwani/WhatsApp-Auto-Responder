@@ -1,0 +1,28 @@
+name: 🐛 Bug Report
+description: File a bug report to help us improve WhatsApp Auto-Responder
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for reporting a bug! Please provide as much detail as possible.
+  - type: input
+    id: device
+    attributes:
+      label: Device & Android Version
+      placeholder: e.g., Samsung Galaxy S23, Android 14 (OneUI 6)
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Bug Description
+      placeholder: A clear description of what the bug is.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      placeholder: 1. Open app\n2. Toggle auto-responder\n3. Receive message...
+    validations:
+      required: true
