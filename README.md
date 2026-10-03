@@ -1,18 +1,19 @@
 # 🤖 WhatsApp Auto-Responder (AI-Powered)
 
 [![GitHub Release](https://img.shields.io/github/v/release/Prince-nebhwani/WhatsApp-Auto-Responder?color=25D366&logo=github&style=for-the-badge)](https://github.com/Prince-nebhwani/WhatsApp-Auto-Responder/releases/latest)
+[![Obtainium](https://img.shields.io/badge/Obtainium-Add%20App-007AFF?logo=android&logoColor=white&style=for-the-badge)](obtainium://app/https%3A%2F%2Fgithub.com%2FPrince-nebhwani%2FWhatsApp-Auto-Responder)
 [![Website](https://img.shields.io/badge/Website-Live%20Demo-25D366?logo=googlechrome&logoColor=white&style=for-the-badge)](https://prince-nebhwani.github.io/WhatsApp-Auto-Responder/)
 [![Android](https://img.shields.io/badge/Platform-Android%208.0%2B-3DDC84?logo=android&logoColor=white&style=for-the-badge)](https://github.com/Prince-nebhwani/WhatsApp-Auto-Responder/releases)
 [![AI Engine](https://img.shields.io/badge/AI%20Engine-Google%20Gemini-4285F4?logo=google&logoColor=white&style=for-the-badge)](https://ai.google.dev/)
 [![UI](https://img.shields.io/badge/UI-Jetpack%20Compose-4285F4?logo=jetpackcompose&logoColor=white&style=for-the-badge)](https://developer.android.com/jetpack/compose)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
 
-A modern, privacy-first Android application that automatically replies to WhatsApp messages using **Google Gemini AI**. Customize personality tones, schedule future messages, and automate your communication without sacrificing privacy.
+A modern, privacy-first Android application that automatically replies to WhatsApp messages using **Google Gemini AI**. Customize personality tones, schedule future messages, and automate your communication without sacrificing privacy or paying monthly subscription fees.
 
 ---
 
-### 🌐 [**Visit Official Landing Page**](https://prince-nebhwani.github.io/WhatsApp-Auto-Responder/) &nbsp;|&nbsp; 📥 [**Download Latest APK (v1.0.1 - Security Patched)**](https://github.com/Prince-nebhwani/WhatsApp-Auto-Responder/releases/download/v1.0.1/WhatsApp-Auto-Responder.apk)
-*Direct download • Verified Build • Size: ~18.8 MB*
+### 🌐 [**Visit Official Landing Page**](https://prince-nebhwani.github.io/WhatsApp-Auto-Responder/) &nbsp;|&nbsp; 📥 [**Download Latest APK (v1.0.1)**](https://github.com/Prince-nebhwani/WhatsApp-Auto-Responder/releases/download/v1.0.1/WhatsApp-Auto-Responder.apk) &nbsp;|&nbsp; 📲 [**Add to Obtainium**](obtainium://app/https%3A%2F%2Fgithub.com%2FPrince-nebhwani%2FWhatsApp-Auto-Responder)
+*Direct download • Verified Build • Size: ~18.8 MB • Works on Android 8.0+*
 
 ---
 
@@ -29,6 +30,18 @@ A modern, privacy-first Android application that automatically replies to WhatsA
 - **⚡ Native Notification Action Interception:** Uses Android's official `NotificationListenerService` and notification action replies (the same mechanism used by Wear OS smartwatches and Android Auto).
 - **🎨 Modern Material 3 UI:** Clean, responsive user interface built 100% with Jetpack Compose.
 - **🛡️ 100% Local & Privacy-First:** No middleman backend, no tracking, and no external analytics.
+
+---
+
+## 🥊 Why This App? (Comparison with Alternatives)
+
+| Feature / Aspect | **This App (FOSS)** | Commercial Play Store Apps | Python / Web Scraper Bots |
+| :--- | :--- | :--- | :--- |
+| **Cost** | **100% Free forever** (BYOK Gemini API) | Paid subscription ($5–$15/mo) | Free, but requires 24/7 VPS hosting |
+| **WhatsApp Ban Risk** | **0% Risk** (Uses official Android notification API) | 0% Risk (Uses same notification API) | **High Risk** (Scrapers get banned by WhatsApp) |
+| **Privacy & Security** | **100% On-device Room DB**, No trackers | Closed-source, ads, unknown data harvesting | Depends on self-hosted script |
+| **Setup Difficulty** | Install APK & paste Gemini API key | Install app, pay paywall | Complex (Node/Python, Docker, headless Chrome) |
+| **Smartwatch Emulation** | Handled natively via `RemoteInput` | Supported | Unsupported |
 
 ---
 
