@@ -156,6 +156,15 @@ You can pause the responder anytime from the main dashboard toggle or configure 
 
 ---
 
+## 👨‍💻 Author & Maintainer
+
+**Prince Nebhwani**
+- GitHub: [@Prince-nebhwani](https://github.com/Prince-nebhwani)
+- Project: [WhatsApp-Auto-Responder](https://github.com/Prince-nebhwani/WhatsApp-Auto-Responder)
+
+---
+
 ## 📄 License
 
 This project is licensed under the [MIT License](LICENSE) — free for personal and open-source use.
+Copyright (c) 2026 Prince Nebhwani. All rights reserved.
