@@ -83,9 +83,9 @@ To verify that your downloaded file has not been altered or tampered with, compa
 
 | Hash Algorithm | Checksum |
 |---|---|
-| **SHA-256** | `39307f6230d2daa1f6935a8cadafdca8c47a4225dcab92dcf52017371fad73a9` |
-| **SHA-1** | `7b42e8b648e795f83ffc4611cb2e848033dc3cad` |
-| **MD5** | `dd3277730fdd78d195017ff1c6ec40e9` |
+| **SHA-256** | `255c574c682f407f9cf8fee56504f7ac2a578b40d1048008d3ad6a3f9667a443` |
+| **SHA-1** | `ac5ab677409e9f64995ce7340460a92f78f90fb3` |
+| **MD5** | `69168337f077148a04cd037a510b092a` |
 
 ### 🛡️ Security & Architecture
 - **Prompt Injection Defense:** Hardened AI system instruction to explicitly reject adversarial override commands inside incoming messages.
