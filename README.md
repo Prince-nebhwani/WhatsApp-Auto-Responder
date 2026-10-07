@@ -8,11 +8,11 @@
 [![UI](https://img.shields.io/badge/UI-Jetpack%20Compose-4285F4?logo=jetpackcompose&logoColor=white&style=for-the-badge)](https://developer.android.com/jetpack/compose)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
 
-A modern, privacy-first Android application that automatically replies to WhatsApp messages using **Google Gemini AI**. Customize personality tones, schedule future messages, and automate your communication without sacrificing privacy or paying monthly subscription fees.
+A modern, privacy-first Android application that automatically replies to WhatsApp messages using **Google Gemini AI**. Customize personality tones and automate your communication without sacrificing privacy or paying monthly subscription fees.
 
 ---
 
-### 🌐 [**Visit Official Landing Page**](https://prince-nebhwani.github.io/WhatsApp-Auto-Responder/) &nbsp;|&nbsp; 📥 [**Download Latest APK (v1.0.1)**](https://github.com/Prince-nebhwani/WhatsApp-Auto-Responder/releases/download/v1.0.1/WhatsApp-Auto-Responder.apk) &nbsp;|&nbsp; 📲 [**Add to Obtainium**](obtainium://app/https%3A%2F%2Fgithub.com%2FPrince-nebhwani%2FWhatsApp-Auto-Responder)
+### 🌐 [**Visit Official Landing Page**](https://prince-nebhwani.github.io/WhatsApp-Auto-Responder/) &nbsp;|&nbsp; 📥 [**Download Latest APK (v1.0.0)**](https://github.com/Prince-nebhwani/WhatsApp-Auto-Responder/releases/download/v1.0.0/WhatsApp-Auto-Responder.apk) &nbsp;|&nbsp; 📲 [**Add to Obtainium**](obtainium://app/https%3A%2F%2Fgithub.com%2FPrince-nebhwani%2FWhatsApp-Auto-Responder)
 *Direct download • Verified Build • Size: ~18.8 MB • Works on Android 8.0+*
 
 ---
@@ -20,13 +20,13 @@ A modern, privacy-first Android application that automatically replies to WhatsA
 ## ✨ Features
 
 - **🧠 Google Gemini AI Replies:** Unlike standard auto-responders that use rigid keyword matching or regex, this app analyzes conversational context and crafts human-like, helpful responses.
+- **🔑 In-App Gemini API Key Manager:** Tap the dashboard card to paste or enter your free Google Gemini API key with one-tap clipboard paste.
 - **🎭 Customizable Personality & Tones:** Choose how your auto-responder speaks or write your own custom prompt:
   - **Professional & Direct:** Polite, articulate, and business-ready.
   - **Friendly & Warm:** Enthusiastic, welcoming, and emoji-friendly.
   - **Chill & Casual:** Relaxed, lowercase, natural conversational flow.
   - **Witty & Sarcastic:** Fun, clever, and playful banter.
   - **Custom System Prompt:** Fully configure your own AI persona and instructions.
-- **⏰ Smart Message Scheduler:** Schedule one-time or recurring messages for specific contacts with exact Android alarm triggers.
 - **⚡ Native Notification Action Interception:** Uses Android's official `NotificationListenerService` and notification action replies (the same mechanism used by Wear OS smartwatches and Android Auto).
 - **🎨 Modern Material 3 UI:** Clean, responsive user interface built 100% with Jetpack Compose.
 - **🛡️ 100% Local & Privacy-First:** No middleman backend, no tracking, and no external analytics.
@@ -59,7 +59,6 @@ You supply your own free Google Gemini API key from [Google AI Studio](https://a
 All reply logs, conversation history, and custom tone definitions are stored strictly inside a local SQLite database (powered by Android Jetpack Room) on your physical device:
 - `personality_tones`
 - `whatsapp_messages`
-- `scheduled_messages`
 
 Uninstalling or clearing app data wipes everything instantly.
 
@@ -68,7 +67,6 @@ Uninstalling or clearing app data wipes everything instantly.
 | Permission | Android ID | Why It Is Needed |
 |---|---|---|
 | **Notification Access** | `BIND_NOTIFICATION_LISTENER_SERVICE` | Required to detect incoming notifications from WhatsApp and send inline replies via the notification's `RemoteInput` action. Does not read or store notifications from other apps. |
-| **Exact Alarm** | `SCHEDULE_EXACT_ALARM` | Required to trigger scheduled messages at the exact time you specify. |
 | **Post Notifications** | `POST_NOTIFICATIONS` | (Android 13+) Required to display active background service status and notification alerts. |
 | **Internet Access** | `INTERNET` & `ACCESS_NETWORK_STATE` | Required exclusively to send prompts to Google's official Gemini API and receive generated responses. |
 
@@ -126,9 +124,10 @@ Get-FileHash .\WhatsApp-Auto-Responder.apk -Algorithm SHA256
    * Return to Notification Access and toggle it **ON**.
 
 ### Step 3: Configure Your Free Gemini API Key
-1. Go to **[Google AI Studio](https://aistudio.google.com/app/apikey)** and click **Create API Key** (it is free).
-2. Copy your key and paste it into the app's settings.
-3. Tap **Test API Key** to verify connectivity.
+1. Go to **[Google AI Studio](https://aistudio.google.com/app/apikey)** and click **Create API Key** (it is 100% free).
+2. Open the app and tap the yellow **🔑 Gemini API Key** card on the dashboard.
+3. Tap **📋 Paste from Clipboard** (or paste manually) $\rightarrow$ tap **Save**.
+4. Your key is stored securely in local device storage and AI auto-replies are instantly activated!
 
 ### Step 4: Choose Your Tone & Turn On!
 1. Select your preferred reply persona (e.g., *Professional*, *Friendly*, *Casual*, or create your own).
