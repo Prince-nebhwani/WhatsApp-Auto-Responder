@@ -85,7 +85,7 @@ To verify that your downloaded file has not been altered or tampered with, compa
 
 | Hash Algorithm | Checksum |
 |---|---|
-| **SHA-256** | `4cfc0991d1b653eb4acc2ea2b64d75db03976e3bde48fb24457101df5cd7cb12` |
+| **SHA-256** | `cd371e3956807cb4414c9650ff3c81c4d72eceb30a499a5d259cbe6cd98021bb` |
 | **SHA-1** | `1f53169dbda321ae6e748d41502759eaf6327e21` |
 | **MD5** | `3ad1b09819c05f21a993bafbe1617402` |
 
@@ -100,7 +100,7 @@ To verify that your downloaded file has not been altered or tampered with, compa
 #### On Linux / macOS:
 ```bash
 sha256sum WhatsApp-Auto-Responder.apk
-# Expected output: 4cfc0991d1b653eb4acc2ea2b64d75db03976e3bde48fb24457101df5cd7cb12
+# Expected output: cd371e3956807cb4414c9650ff3c81c4d72eceb30a499a5d259cbe6cd98021bb
 ```
 
 #### On Windows (PowerShell):
