@@ -80,26 +80,27 @@ To verify that your downloaded file has not been altered or tampered with, compa
 
 - **Filename:** `WhatsApp-Auto-Responder.apk`
 - **Package Name:** `com.aistudio.whatsappautoresponder.zkympl`
-- **Version:** `1.0.1` (Build 2) — *Security Hardened Release*
+- **Version:** `1.0.0` — *Official Release*
 - **File Size:** `19,699,079 bytes (18.79 MiB)`
 
 | Hash Algorithm | Checksum |
 |---|---|
-| **SHA-256** | `af398fda26c6885f3b5b548248b1abf6f73dd47d53ad591b4f050d5978d66e61` |
-| **SHA-1** | `a7a3d805c473a1b794dca8421cc9f1e4d3664733` |
-| **MD5** | `8c25e28892f2949821d4b52a4b9dc614` |
+| **SHA-256** | `4cfc0991d1b653eb4acc2ea2b64d75db03976e3bde48fb24457101df5cd7cb12` |
+| **SHA-1** | `1f53169dbda321ae6e748d41502759eaf6327e21` |
+| **MD5** | `3ad1b09819c05f21a993bafbe1617402` |
 
-### 🛡️ Security Patch v1.0.1 Changelog
-- **Prompt Injection Defense:** Hardened AI system instruction to explicitly reject and ignore adversarial override commands inside incoming messages.
-- **ADB Backup Disabled:** Explicitly set `android:allowBackup="false"` to prevent unauthorized data extractions via USB debugging.
-- **Debug Mode Stripped:** Set `android:debuggable="false"` to secure app memory against debugger inspection.
+### 🛡️ Security & Architecture
+- **Prompt Injection Defense:** Hardened AI system instruction to explicitly reject adversarial override commands inside incoming messages.
+- **Privacy First:** Zero hardcoded credentials or middleman servers. All chat logs and configuration remain on your local device.
+- **ADB Backup Disabled:** `android:allowBackup="false"` prevents unauthorized data extractions via USB debugging.
+- **Signed & Verified:** Signed with official APK Signature Scheme v2 & v3 with 4-byte zip alignment.
 
 ### How to Verify Checksum
 
 #### On Linux / macOS:
 ```bash
 sha256sum WhatsApp-Auto-Responder.apk
-# Expected output: af398fda26c6885f3b5b548248b1abf6f73dd47d53ad591b4f050d5978d66e61
+# Expected output: 4cfc0991d1b653eb4acc2ea2b64d75db03976e3bde48fb24457101df5cd7cb12
 ```
 
 #### On Windows (PowerShell):
@@ -113,13 +114,16 @@ Get-FileHash .\WhatsApp-Auto-Responder.apk -Algorithm SHA256
 
 ### Step 1: Download & Install
 1. Download [`WhatsApp-Auto-Responder.apk`](https://github.com/Prince-nebhwani/WhatsApp-Auto-Responder/releases/download/v1.0.0/WhatsApp-Auto-Responder.apk) on your Android device.
-2. Tap the downloaded file. If prompted, enable **"Allow from this source"** in your browser/file manager settings to permit installation.
-3. Tap **Install**.
+2. Tap the downloaded file $\rightarrow$ tap **Install**.
+3. *(If updating from an earlier test build, uninstall the previous version first).*
 
-### Step 2: Grant Notification Access
-1. Open the app.
-2. Follow the on-screen prompt to enable **Notification Access** for **WhatsApp Auto-Responder**.
-3. *(This allows the app to detect incoming chat notifications and reply on your behalf).*
+### Step 2: Grant Notification Access (Android 13 / 14 / 15)
+1. Open the app and tap **Enable Notification Access**.
+2. **If Android says "Restricted setting":**
+   * Go to phone **Settings $\rightarrow$ Apps $\rightarrow$ WhatsApp Auto-Responder**.
+   * Tap the **three dots (⋮)** in the top-right corner.
+   * Tap **Allow restricted settings** and enter your PIN/fingerprint.
+   * Return to Notification Access and toggle it **ON**.
 
 ### Step 3: Configure Your Free Gemini API Key
 1. Go to **[Google AI Studio](https://aistudio.google.com/app/apikey)** and click **Create API Key** (it is free).
