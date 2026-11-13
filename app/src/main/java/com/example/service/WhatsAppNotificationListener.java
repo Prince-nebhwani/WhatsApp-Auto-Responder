@@ -84,6 +84,24 @@ public final class WhatsAppNotificationListener extends NotificationListenerServ
         Log.d(TAG, "Notification Listener Service Destroyed");
     }
 
+    private static boolean isDuplicate(String sender, String message) {
+        if (sender == null || message == null) {
+            return false;
+        }
+        String signature = sender + ":::" + message;
+        long now = System.currentTimeMillis();
+        Long lastTime = processedMap.get(signature);
+        if (lastTime != null && now - lastTime.longValue() < 8000L) {
+            return true;
+        }
+        processedMap.put(signature, Long.valueOf(now));
+        lastProcessedMessageId = signature;
+        if (processedMap.size() > 200) {
+            processedMap.clear();
+        }
+        return false;
+    }
+
     @Override // android.service.notification.NotificationListenerService
     public void onNotificationPosted(StatusBarNotification sbn) {
         Notification notification;
@@ -135,17 +153,9 @@ public final class WhatsAppNotificationListener extends NotificationListenerServ
                         return;
                     }
                 }
-                String messageSignature = sender + ":::" + messageText;
-                long now = System.currentTimeMillis();
-                Long lastTime = processedMap.get(messageSignature);
-                if (lastTime != null && now - lastTime.longValue() < 8000L) {
+                if (isDuplicate(sender, messageText)) {
                     Log.d(TAG, "Duplicate notification dropped within 8s window.");
                     return;
-                }
-                processedMap.put(messageSignature, Long.valueOf(now));
-                lastProcessedMessageId = messageSignature;
-                if (processedMap.size() > 200) {
-                    processedMap.clear();
                 }
                 Log.d(TAG, "Intercepted WhatsApp notification: Sender='" + sender + "', Text='" + messageText + "', isGroup=" + isGroup);
                 BuildersKt.launch$default(this.serviceScope, (CoroutineContext) null, (CoroutineStart) null, new AnonymousClass1(sender, messageText, sbn, isGroup, null), 3, (Object) null);
