@@ -56,6 +56,7 @@ public final class WhatsAppNotificationListener extends NotificationListenerServ
     public static final String PREFS_NAME = "whatsapp_responder_prefs";
     private static final String TAG = "WhatsAppListener";
     private static String lastProcessedMessageId;
+    private static final java.util.concurrent.ConcurrentHashMap<String, Long> processedMap = new java.util.concurrent.ConcurrentHashMap<>();
     private SharedPreferences prefs;
     private WhatsAppRepository repository;
     private final CompletableJob serviceJob = SupervisorKt.SupervisorJob$default((Job) null, 1, (Object) null);
@@ -92,7 +93,14 @@ public final class WhatsAppNotificationListener extends NotificationListenerServ
         Intrinsics.checkNotNullParameter(sbn, "sbn");
         super.onNotificationPosted(sbn);
         String packageName = sbn.getPackageName();
-        if (!Intrinsics.areEqual(packageName, "com.whatsapp") || (notification = sbn.getNotification()) == null || (extras = notification.extras) == null || (senderCharSeq = extras.getCharSequence("android.title")) == null) {
+        if (!Intrinsics.areEqual(packageName, "com.whatsapp") || (notification = sbn.getNotification()) == null) {
+            return;
+        }
+        if ((notification.flags & Notification.FLAG_GROUP_SUMMARY) != 0) {
+            Log.d(TAG, "Ignoring group summary notification.");
+            return;
+        }
+        if ((extras = notification.extras) == null || (senderCharSeq = extras.getCharSequence("android.title")) == null) {
             return;
         }
         String sender = senderCharSeq.toString();
@@ -127,11 +135,18 @@ public final class WhatsAppNotificationListener extends NotificationListenerServ
                         return;
                     }
                 }
-                String messageSignature = sbn.getId() + "_" + sbn.getPostTime() + "_" + messageText.hashCode();
-                if (Intrinsics.areEqual(lastProcessedMessageId, messageSignature)) {
+                String messageSignature = sender + ":::" + messageText;
+                long now = System.currentTimeMillis();
+                Long lastTime = processedMap.get(messageSignature);
+                if (lastTime != null && now - lastTime.longValue() < 8000L) {
+                    Log.d(TAG, "Duplicate notification dropped within 8s window.");
                     return;
                 }
+                processedMap.put(messageSignature, Long.valueOf(now));
                 lastProcessedMessageId = messageSignature;
+                if (processedMap.size() > 200) {
+                    processedMap.clear();
+                }
                 Log.d(TAG, "Intercepted WhatsApp notification: Sender='" + sender + "', Text='" + messageText + "', isGroup=" + isGroup);
                 BuildersKt.launch$default(this.serviceScope, (CoroutineContext) null, (CoroutineStart) null, new AnonymousClass1(sender, messageText, sbn, isGroup, null), 3, (Object) null);
             }
@@ -356,6 +371,13 @@ public final class WhatsAppNotificationListener extends NotificationListenerServ
                             cleanSent = StringsKt.trim(msg.getMessageText()).toString();
                             if (StringsKt.equals(cleanIncoming, cleanSent, true)) {
                                 Log.d(WhatsAppNotificationListener.TAG, "Incoming text matches our recently sent message. Skipping to avoid infinite loop.");
+                                return Unit.INSTANCE;
+                            }
+                        } else {
+                            cleanIncoming = StringsKt.trim(this.$messageText).toString();
+                            cleanSent = StringsKt.trim(msg.getMessageText()).toString();
+                            if (StringsKt.equals(cleanIncoming, cleanSent, true)) {
+                                Log.d(WhatsAppNotificationListener.TAG, "Duplicate incoming message already in recent history. Skipping.");
                                 return Unit.INSTANCE;
                             }
                         }

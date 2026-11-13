@@ -80,7 +80,7 @@ public final class WhatsAppViewModel extends AndroidViewModel {
         this.isGroupReplyEnabled = StateFlowKt.MutableStateFlow(false);
         this.activeToneId = StateFlowKt.MutableStateFlow(1);
         this.chatbotSystemInstruction = StateFlowKt.MutableStateFlow("You are a helpful, extremely fast AI assistant.");
-        this.chatbotModel = StateFlowKt.MutableStateFlow("gemini-3.1-flash-lite-preview");
+        this.chatbotModel = StateFlowKt.MutableStateFlow("gemini-1.5-flash");
         this.useChatbotForReplies = StateFlowKt.MutableStateFlow(true);
         this.isGeneratingChatbotReply = StateFlowKt.MutableStateFlow(false);
         WhatsAppDatabase db = WhatsAppDatabase.INSTANCE.getDatabase(application, ViewModelKt.getViewModelScope((ViewModel) this));
@@ -192,8 +192,8 @@ public final class WhatsAppViewModel extends AndroidViewModel {
         String string = this.prefs.getString(KEY_CHATBOT_INSTRUCTION, "You are a helpful, extremely fast AI assistant.");
         mutableStateFlow.setValue(string != null ? string : "You are a helpful, extremely fast AI assistant.");
         MutableStateFlow<String> mutableStateFlow2 = this.chatbotModel;
-        String string2 = this.prefs.getString(KEY_CHATBOT_MODEL, "gemini-3.1-flash-lite-preview");
-        mutableStateFlow2.setValue(string2 != null ? string2 : "gemini-3.1-flash-lite-preview");
+        String string2 = this.prefs.getString(KEY_CHATBOT_MODEL, "gemini-1.5-flash");
+        mutableStateFlow2.setValue(string2 != null ? string2 : "gemini-1.5-flash");
         this.useChatbotForReplies.setValue(Boolean.valueOf(this.prefs.getBoolean(KEY_USE_CHATBOT_FOR_REPLIES, true)));
     }
 

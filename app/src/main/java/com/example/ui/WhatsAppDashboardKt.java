@@ -7048,7 +7048,7 @@ public final class WhatsAppDashboardKt {
             Object objRememberedValue4 = $composer2.rememberedValue();
             if (objRememberedValue4 == Composer.Companion.getEmpty()) {
                 i2 = 0;
-                objMutableStateOf$default2 = SnapshotStateKt.mutableStateOf$default(false, (SnapshotMutationPolicy) null, 2, (Object) null);
+                objMutableStateOf$default2 = SnapshotStateKt.mutableStateOf$default(true, (SnapshotMutationPolicy) null, 2, (Object) null);
                 $composer2.updateRememberedValue(objMutableStateOf$default2);
             } else {
                 i2 = 0;
@@ -7072,7 +7072,7 @@ public final class WhatsAppDashboardKt {
                 }
                 ComposerKt.sourceInformationMarkerEnd($composer2);
                 EffectsKt.LaunchedEffect(numValueOf, boolValueOf, (Function2) whatsAppDashboardKt$ChatbotTab$1$1, $composer2, 0);
-                final List presetRoles = CollectionsKt.listOf(new Triple[]{new Triple("⚡ Lite Fast", "Reply in 1-2 extremely short, simple, and casual sentences.", "gemini-3.1-flash-lite-preview"), new Triple("💼 Pro Agent", "Reply in a highly professional, well-structured, formal, and polite manner.", "gemini-3.5-flash"), new Triple("🧠 Deep Brain", "Reply with deep analytical reasoning, highly logical structure, and robust depth.", "gemini-3.1-pro-preview"), new Triple("😏 Witty Buddy", "Reply with clever banter, dry sarcasm, playful wit, and a touch of modern slang.", "gemini-3.5-flash")});
+                final List presetRoles = CollectionsKt.listOf(new Triple[]{new Triple("⚡ Lite Fast", "Reply in 1-2 extremely short, simple, and casual sentences.", "gemini-1.5-flash"), new Triple("💼 Pro Agent", "Reply in a highly professional, well-structured, formal, and polite manner.", "gemini-2.5-flash"), new Triple("🧠 Deep Brain", "Reply with deep analytical reasoning, highly logical structure, and robust depth.", "gemini-1.5-pro"), new Triple("😏 Witty Buddy", "Reply with clever banter, dry sarcasm, playful wit, and a touch of modern slang.", "gemini-2.5-flash")});
                 Modifier modifier4 = PaddingKt.padding-qDBjuR0$default(SizeKt.fillMaxSize$default(modifier3, 0.0f, 1, (Object) null), 0.0f, 0.0f, 0.0f, Dp.constructor-impl(8), 7, (Object) null);
                 ComposerKt.sourceInformationMarkerStart($composer2, -483455358, "CC(Column)P(2,3,1)85@4251L61,86@4317L133:Column.kt#2w3rfo");
                 measurePolicyColumnMeasurePolicy = ColumnKt.columnMeasurePolicy(Arrangement.INSTANCE.getTop(), Alignment.Companion.getStart(), $composer2, ((0 >> 3) & 14) | ((0 >> 3) & 112));
@@ -7626,7 +7626,7 @@ public final class WhatsAppDashboardKt {
             $composer2.updateRememberedValue(whatsAppDashboardKt$ChatbotTab$1$1);
             ComposerKt.sourceInformationMarkerEnd($composer2);
             EffectsKt.LaunchedEffect(numValueOf, boolValueOf, (Function2) whatsAppDashboardKt$ChatbotTab$1$1, $composer2, 0);
-            final List presetRoles2 = CollectionsKt.listOf(new Triple[]{new Triple("⚡ Lite Fast", "Reply in 1-2 extremely short, simple, and casual sentences.", "gemini-3.1-flash-lite-preview"), new Triple("💼 Pro Agent", "Reply in a highly professional, well-structured, formal, and polite manner.", "gemini-3.5-flash"), new Triple("🧠 Deep Brain", "Reply with deep analytical reasoning, highly logical structure, and robust depth.", "gemini-3.1-pro-preview"), new Triple("😏 Witty Buddy", "Reply with clever banter, dry sarcasm, playful wit, and a touch of modern slang.", "gemini-3.5-flash")});
+            final List presetRoles2 = CollectionsKt.listOf(new Triple[]{new Triple("⚡ Lite Fast", "Reply in 1-2 extremely short, simple, and casual sentences.", "gemini-1.5-flash"), new Triple("💼 Pro Agent", "Reply in a highly professional, well-structured, formal, and polite manner.", "gemini-2.5-flash"), new Triple("🧠 Deep Brain", "Reply with deep analytical reasoning, highly logical structure, and robust depth.", "gemini-1.5-pro"), new Triple("😏 Witty Buddy", "Reply with clever banter, dry sarcasm, playful wit, and a touch of modern slang.", "gemini-2.5-flash")});
             Modifier modifier15 = PaddingKt.padding-qDBjuR0$default(SizeKt.fillMaxSize$default(modifier3, 0.0f, 1, (Object) null), 0.0f, 0.0f, 0.0f, Dp.constructor-impl(8), 7, (Object) null);
             ComposerKt.sourceInformationMarkerStart($composer2, -483455358, "CC(Column)P(2,3,1)85@4251L61,86@4317L133:Column.kt#2w3rfo");
             measurePolicyColumnMeasurePolicy = ColumnKt.columnMeasurePolicy(Arrangement.INSTANCE.getTop(), Alignment.Companion.getStart(), $composer2, ((0 >> 3) & 14) | ((0 >> 3) & 112));
@@ -8936,7 +8936,7 @@ public final class WhatsAppDashboardKt {
                 ComposerKt.sourceInformationMarkerStart(composer7, 445522054, "C:WhatsAppDashboard.kt#naom5h");
                 composer7.startReplaceGroup(2092590806);
                 ComposerKt.sourceInformation(composer7, "*1383@60544L42,1384@60632L33,1385@60735L361,1382@60482L965");
-                iterableListOf = CollectionsKt.listOf(new Pair[]{new Pair("Pro preview (Complex)", "gemini-3.1-pro-preview"), new Pair("Flash (General)", "gemini-3.5-flash"), new Pair("Flash Lite (Fast)", "gemini-3.1-flash-lite-preview")});
+                iterableListOf = CollectionsKt.listOf(new Pair[]{new Pair("Pro (Complex)", "gemini-1.5-pro"), new Pair("Flash (General)", "gemini-2.5-flash"), new Pair("Flash Lite (Fast)", "gemini-1.5-flash")});
                 i = 0;
                 it = iterableListOf.iterator();
                 while (it.hasNext()) {
@@ -9529,7 +9529,7 @@ public final class WhatsAppDashboardKt {
             ComposerKt.sourceInformationMarkerStart(composer7, 445522054, "C:WhatsAppDashboard.kt#naom5h");
             composer7.startReplaceGroup(2092590806);
             ComposerKt.sourceInformation(composer7, "*1383@60544L42,1384@60632L33,1385@60735L361,1382@60482L965");
-            iterableListOf = CollectionsKt.listOf(new Pair[]{new Pair("Pro preview (Complex)", "gemini-3.1-pro-preview"), new Pair("Flash (General)", "gemini-3.5-flash"), new Pair("Flash Lite (Fast)", "gemini-3.1-flash-lite-preview")});
+            iterableListOf = CollectionsKt.listOf(new Pair[]{new Pair("Pro (Complex)", "gemini-1.5-pro"), new Pair("Flash (General)", "gemini-2.5-flash"), new Pair("Flash Lite (Fast)", "gemini-1.5-flash")});
             i = 0;
             it = iterableListOf.iterator();
             while (it.hasNext()) {
@@ -10218,7 +10218,7 @@ public final class WhatsAppDashboardKt {
             ComposerKt.sourceInformationMarkerStart(composer7, 445522054, "C:WhatsAppDashboard.kt#naom5h");
             composer7.startReplaceGroup(2092590806);
             ComposerKt.sourceInformation(composer7, "*1383@60544L42,1384@60632L33,1385@60735L361,1382@60482L965");
-            iterableListOf = CollectionsKt.listOf(new Pair[]{new Pair("Pro preview (Complex)", "gemini-3.1-pro-preview"), new Pair("Flash (General)", "gemini-3.5-flash"), new Pair("Flash Lite (Fast)", "gemini-3.1-flash-lite-preview")});
+            iterableListOf = CollectionsKt.listOf(new Pair[]{new Pair("Pro (Complex)", "gemini-1.5-pro"), new Pair("Flash (General)", "gemini-2.5-flash"), new Pair("Flash Lite (Fast)", "gemini-1.5-flash")});
             i = 0;
             it = iterableListOf.iterator();
             while (it.hasNext()) {
@@ -10816,7 +10816,7 @@ public final class WhatsAppDashboardKt {
         ComposerKt.sourceInformationMarkerStart(composer7, 445522054, "C:WhatsAppDashboard.kt#naom5h");
         composer7.startReplaceGroup(2092590806);
         ComposerKt.sourceInformation(composer7, "*1383@60544L42,1384@60632L33,1385@60735L361,1382@60482L965");
-        iterableListOf = CollectionsKt.listOf(new Pair[]{new Pair("Pro preview (Complex)", "gemini-3.1-pro-preview"), new Pair("Flash (General)", "gemini-3.5-flash"), new Pair("Flash Lite (Fast)", "gemini-3.1-flash-lite-preview")});
+        iterableListOf = CollectionsKt.listOf(new Pair[]{new Pair("Pro (Complex)", "gemini-1.5-pro"), new Pair("Flash (General)", "gemini-2.5-flash"), new Pair("Flash Lite (Fast)", "gemini-1.5-flash")});
         i = 0;
         it = iterableListOf.iterator();
         while (it.hasNext()) {
@@ -11385,7 +11385,6 @@ public final class WhatsAppDashboardKt {
     }
 
     static final Unit ChatbotTab$lambda$243$lambda$226$lambda$225$lambda$224$lambda$223$lambda$220$lambda$219$lambda$217$lambda$216(WhatsAppViewModel $viewModel, String $prompt, String $model) {
-        $viewModel.updateChatbotSystemInstruction($prompt);
         $viewModel.updateChatbotModel($model);
         return Unit.INSTANCE;
     }

@@ -79,13 +79,13 @@ To verify that your downloaded file has not been altered or tampered with, compa
 - **Filename:** `WhatsApp-Auto-Responder.apk`
 - **Package Name:** `com.aistudio.whatsappautoresponder.zkympl`
 - **Version:** `1.0.0` — *Official Release*
-- **File Size:** `19,699,079 bytes (18.79 MiB)`
+- **File Size:** `19,703,175 bytes (18.79 MiB)`
 
 | Hash Algorithm | Checksum |
 |---|---|
-| **SHA-256** | `255c574c682f407f9cf8fee56504f7ac2a578b40d1048008d3ad6a3f9667a443` |
-| **SHA-1** | `ac5ab677409e9f64995ce7340460a92f78f90fb3` |
-| **MD5** | `69168337f077148a04cd037a510b092a` |
+| **SHA-256** | `8a062aa12d92a714a3ca5572d549ee2fba071792c8eccbd4e1788778688eb136` |
+| **SHA-1** | `ba05345d1946d5cc846d9b52eb0e72a18e793b1d` |
+| **MD5** | `eb0fc57808e0320cd91519077abc7846` |
 
 ### 🛡️ Security & Architecture
 - **Prompt Injection Defense:** Hardened AI system instruction to explicitly reject adversarial override commands inside incoming messages.
@@ -98,7 +98,7 @@ To verify that your downloaded file has not been altered or tampered with, compa
 #### On Linux / macOS:
 ```bash
 sha256sum WhatsApp-Auto-Responder.apk
-# Expected output: 39307f6230d2daa1f6935a8cadafdca8c47a4225dcab92dcf52017371fad73a9
+# Expected output: 8a062aa12d92a714a3ca5572d549ee2fba071792c8eccbd4e1788778688eb136
 ```
 
 #### On Windows (PowerShell):
